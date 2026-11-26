@@ -36,10 +36,23 @@ Figma 공식 스킬(`figma-use`, `figma-generate-design`) 위에 **순서 규칙
 
 ## 설치
 
-`SKILL.md`를 Claude 스킬로 추가하세요.
+### Claude Code — 한 줄 설치
 
-- **Claude 앱**: 설정 → 기능(Capabilities) → 스킬에서 업로드
-- **Claude Code**: `~/.claude/skills/apply-ds-to-prototype/SKILL.md` 에 복사
+```bash
+curl -fsSL https://raw.githubusercontent.com/figmatutor2/apply-ds-to-prototype/main/install.sh | bash
+```
+
+현재 프로젝트에만 설치하려면:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/figmatutor2/apply-ds-to-prototype/main/install.sh | bash -s -- --project
+```
+
+이미 설치돼 있으면 기존 파일을 `SKILL.md.bak`으로 백업한 뒤 최신 버전으로 바꿔요. 업데이트할 때도 같은 명령을 쓰면 돼요.
+
+### Claude 앱 (claude.ai · Cowork)
+
+[Releases](https://github.com/figmatutor2/apply-ds-to-prototype/releases/latest)에서 `apply-ds-to-prototype.zip`을 받아 스킬 설정 화면에서 업로드하세요.
 
 ## 사용 예
 
