@@ -1,0 +1,19 @@
+{
+  "name": "highstand",
+  "owner": {
+    "name": "HighStand · 하이서",
+    "url": "https://figmatutor.info"
+  },
+  "metadata": {
+    "description": "Figma × Claude 실무 스킬 모음 (HighStand)"
+  },
+  "plugins": [
+    {
+      "name": "apply-ds-to-prototype",
+      "source": "./plugins/apply-ds-to-prototype",
+      "description": "Claude로 만든 프로토타입에 Figma 디자인 시스템(변수·컴포넌트)을 입히고, 비포·애프터 비교 보드와 Before/After 탭 프로토타입까지 만드는 스킬",
+      "version": "1.0.0",
+      "category": "design"
+    }
+  ]
+}

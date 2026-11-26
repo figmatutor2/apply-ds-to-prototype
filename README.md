@@ -36,23 +36,43 @@ Figma 공식 스킬(`figma-use`, `figma-generate-design`) 위에 **순서 규칙
 
 ## 설치
 
-### Claude Code — 한 줄 설치
+### Claude Code — 플러그인으로 설치 (추천)
+
+Claude Code 안에서:
+
+```
+/plugin install apply-ds-to-prototype --marketplace figmatutor2/apply-ds-to-prototype
+```
+
+터미널에서:
+
+```bash
+claude plugin install apply-ds-to-prototype --marketplace figmatutor2/apply-ds-to-prototype
+```
+
+설치 후 Claude Code를 다시 시작하세요. 업데이트는 `claude plugin update apply-ds-to-prototype@highstand`.
+
+> 마켓플레이스만 먼저 추가하려면: `/plugin marketplace add figmatutor2/apply-ds-to-prototype` → `/plugin install apply-ds-to-prototype@highstand`
+
+### 플러그인 없이 스킬 파일만 설치
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/figmatutor2/apply-ds-to-prototype/main/install.sh | bash
 ```
 
-현재 프로젝트에만 설치하려면:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/figmatutor2/apply-ds-to-prototype/main/install.sh | bash -s -- --project
-```
-
-이미 설치돼 있으면 기존 파일을 `SKILL.md.bak`으로 백업한 뒤 최신 버전으로 바꿔요. 업데이트할 때도 같은 명령을 쓰면 돼요.
-
 ### Claude 앱 (claude.ai · Cowork)
 
 [Releases](https://github.com/figmatutor2/apply-ds-to-prototype/releases/latest)에서 `apply-ds-to-prototype.zip`을 받아 스킬 설정 화면에서 업로드하세요.
+
+## 저장소 구조
+
+```
+.claude-plugin/marketplace.json          ← 마켓플레이스 "highstand"
+plugins/apply-ds-to-prototype/
+  .claude-plugin/plugin.json             ← 플러그인 정보
+  skills/apply-ds-to-prototype/SKILL.md  ← 스킬 본문
+install.sh                               ← 스킬 파일만 설치하는 스크립트
+```
 
 ## 사용 예
 

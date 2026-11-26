@@ -23,7 +23,7 @@ if [ -f "${DEST}/SKILL.md" ]; then
   cp "${DEST}/SKILL.md" "${DEST}/SKILL.md.bak"
   echo "• 기존 SKILL.md를 SKILL.md.bak으로 백업했어요."
 fi
-curl -fsSL "${REPO_RAW}/SKILL.md" -o "${DEST}/SKILL.md"
+curl -fsSL "${REPO_RAW}/plugins/apply-ds-to-prototype/skills/apply-ds-to-prototype/SKILL.md" -o "${DEST}/SKILL.md"
 
 echo "✓ ${NAME} 설치 완료 → ${DEST}"
 echo "  Claude Code를 다시 열고 '/${NAME}' 또는 \"디자인 시스템 입혀줘\"로 실행하세요."
